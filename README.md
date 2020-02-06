@@ -19,19 +19,15 @@ We will cover useState and useEffect.
 - Functional components can potentially have a better performance than Class 
 
 ## Goals
-- [ ] Understand the syntax of useState()
-- [ ] Understand the syntax of useEffect()
+- [ ] Understand the syntax of useState() and how state can be implemented into functional components
+- [ ] Understand the syntax of useEffect() and how it substitutes for lifecycle methods
 - [ ] Convert a Class component into a Function Component with Hooks
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## External Resources (Blogs and Documentation)
-- []
+- [Why React Hooks? A Developer's Perspective](https://hackernoon.com/why-react-hooks-a-developers-perspective-2aedb8511f38)
+- [React Hooks: useState(using the state hook)](https://hackernoon.com/react-hooks-usestate-using-the-state-hook-89ec55b84f8c)
+- [React Hooks: useState and useEffect](https://levelup.gitconnected.com/react-hooks-usestate-and-useeffect-2d0b870c654f)
+- [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
+- [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 
