@@ -30,8 +30,8 @@ Hooks are Javascript functions, but they have two important rules:
 Import useState from React by:
 `import React, {useState} from 'react'`
 
-UseState is a function, when invoked with an initial state, returns an array of a stateful value and a function to update it.
-Destructuring is the array is a necessity when working with useState.
+UseState is a function, when invoked with an initial state, **returns an array** of a stateful value and a function to update it.
+Destructuring the array is a necessity when working with useState.
 ```
     const [state, setState] = useState(initialState)
 ```
