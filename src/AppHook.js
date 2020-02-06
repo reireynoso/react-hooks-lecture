@@ -19,7 +19,7 @@ const AppHook = () => {
     // console.log(inf)
     // setInf([3,4])
     // console.log(inf)
-    
+
     return (
         <ul>
 

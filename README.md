@@ -1,10 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# React Hooks
+# React Hooks (useState/useEffect)
 
-We will cover useState and useEffect.
-
-<!-- ![Hook-Image](https://images.unsplash.com/photo-1541690090176-17d35a190b6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80) -->
+![Hook-Image](https://images.unsplash.com/photo-1541690090176-17d35a190b6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80)
 
 ## What are React Hooks 🤔
 
@@ -19,15 +17,28 @@ We will cover useState and useEffect.
 - Functional components can potentially have a better performance than Class 
 
 ## Goals
-- [ ] Understand the syntax of useState() and how state can be implemented into functional components
-- [ ] Understand the syntax of useEffect() and how it substitutes for lifecycle methods
+- [ ] Understand the syntax of useState() and how it is the equivalent of `state` and `setState`
+- [ ] Understand the syntax of useEffect() and how it is the equivalent of lifecycle methods(componentDidMount/componentDidUpdate)
 - [ ] Convert a Class component into a Function Component with Hooks
 
+## Rules of Hooks
+Hooks are Javascript functions, but they have two important rules:
+- Don't call them inside of loops, conditions, or nested functions. Only call them at the TOP LEVEL.
+- Don't call hooks from regular Javascript functions, only call them from React function components.
+
+## Importing and Implementing useState 
+Import useState from React by:
+`import React, {useState} from 'react'`
+
+UseState is a function, when invoked with an initial state, returns an array of a stateful value and a function to update it.
+Destructuring is the array is a necessity when working with useState.
+```
+    const [state, setState] = useState(initialState)
+```
+
 ## External Resources (Blogs and Documentation)
+- [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
 - [Why React Hooks? A Developer's Perspective](https://hackernoon.com/why-react-hooks-a-developers-perspective-2aedb8511f38)
 - [React Hooks: useState(using the state hook)](https://hackernoon.com/react-hooks-usestate-using-the-state-hook-89ec55b84f8c)
 - [React Hooks: useState and useEffect](https://levelup.gitconnected.com/react-hooks-usestate-and-useeffect-2d0b870c654f)
-- [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
-- [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
-
-
