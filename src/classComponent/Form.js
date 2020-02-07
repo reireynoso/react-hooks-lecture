@@ -29,11 +29,11 @@ export default class Form extends Component {
           <h1>Edit Logged In User</h1>
           <form onSubmit={this.handleOnSubmit}>
               <label>Username</label>
-              <input type="text" onChange={this.handleOnChange} autoComplete="off" name="username" placeholder="Username"/>
+              <input type="text" value={this.state.username} onChange={this.handleOnChange} autoComplete="off" name="username" placeholder="Username"/>
               <label>Password</label>
-              <input type="text" onChange={this.handleOnChange} autoComplete="off" name="password" placeholder="Password"/>
+              <input type="text" value={this.state.password} onChange={this.handleOnChange} autoComplete="off" name="password" placeholder="Password"/>
               <label>Bio</label>
-              <input type="text" onChange={this.handleOnChange} autoComplete="off" name="bio" placeholder="Bio"/>
+              <input type="text" value={this.state.bio} onChange={this.handleOnChange} autoComplete="off" name="bio" placeholder="Bio"/>
               <input type="submit" value="Submit"/>
           </form>
       </div>
