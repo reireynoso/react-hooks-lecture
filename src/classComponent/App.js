@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
+import WelcomeComponent from './WelcomeComponent'
+import Form from './Form'
 
 class App extends React.Component{
   state = {
@@ -8,11 +10,8 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <label>Page Number</label>
-        <select>
-          <option>Select</option>
-          {this.state.pageNumArr.map(pageNum => <option>{pageNum}</option>)}
-        </select>
+        <WelcomeComponent user={this.state.user}/>
+        <Form/>
       </div>
     )
   }
