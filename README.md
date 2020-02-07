@@ -36,6 +36,23 @@ Destructuring the array is a necessity when working with useState.
     const [state, setState] = useState(initialState)
 ```
 
+Note: useState does not have to be passed an object. The initial state can be set to an integer, boolean, string, etc.
+
+## Importing and Implementing useEffect 
+Import useEffect from React by:
+`import React, {useEffect} from 'react'`
+
+The hook that allows us to manage side effects, such as API calls, is the useEffect hook. It takes two parameters, a function and an array, and it returns nothing. The function it takes will be executed **after every** render cycle. This can be an issue as it can lead to an infinite loop unless handled correctly.
+
+There is an effective solution for that. The useEffect hook takes a second argument, which controls if the function should be executed. It is an array of values, and the useEffect function will only be executed if one of the values in the array changes.
+
+```
+    useEffect(
+        () => {}, //function
+        [] //array
+    )
+```
+
 ## External Resources (Blogs and Documentation)
 - [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
