@@ -16,6 +16,11 @@ export default class Form extends Component {
   handleOnSubmit = (e) => {
     e.preventDefault()
     this.props.handleReplaceUser(this.state)
+    this.setState({
+        username: "",
+        password: "",
+        bio: ""
+    })
   }
 
   render() {
