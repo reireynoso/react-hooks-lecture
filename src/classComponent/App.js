@@ -34,7 +34,7 @@ class App extends React.Component{
           :
           <UserInfo user={this.state.user}/>
         }
-        <button onClick={this.handleEditMode}>Edit</button>
+        <button onClick={this.handleEditMode}>{this.state.editMode ? "Go Back" : "Edit"}</button>
       </div>
     )
   }
