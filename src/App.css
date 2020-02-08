@@ -1,4 +1,11 @@
-.App {
-  /* text-align: center; */
+body {
+  margin: auto;
 }
 
+.App {
+
+}
+
+input[type="text"] {
+  width: 95%;
+}
