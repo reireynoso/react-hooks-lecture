@@ -2,14 +2,21 @@ import React, { Component } from 'react';
 
 export default class Form extends Component {
   state = {
-      username: this.props.user.username,
-      bio: this.props.user.bio
+      username: "",
+      bio: ""
+  }
+
+  componentDidMount(){
+    this.setState({
+        username: this.props.user.username,
+        bio: this.props.user.bio
+    })
   }
 
   handleOnChange = (e) => {
-      this.setState({
-          [e.target.name]: e.target.value
-      })
+    this.setState({
+        [e.target.name]: e.target.value
+    })
   }
 
   handleOnSubmit = (e) => {
@@ -18,7 +25,6 @@ export default class Form extends Component {
   }
 
   render() {
-
     return (
       <div>
           <h1>Edit Form</h1>
