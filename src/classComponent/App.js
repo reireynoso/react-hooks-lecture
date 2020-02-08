@@ -1,18 +1,18 @@
 import React from 'react';
 import '../App.css';
-import WelcomeComponent from './WelcomeComponent'
 import Form from './Form'
+import UserInfo from './UserInfo'
 
 class App extends React.Component{
   state = {
     user: {
-      username: "AyeeeeeeRic",
-      password: "gen-z",
-      bio: "Holla at yo boi, Eric. Ayeeeee. I like fortniteeeez."
+      username: "Ayeeeeee-ric",
+      bio: "Ayeeeee. I like fortniteeeez. xoxoxo"
     }
   }
 
-  handleReplaceUser = (newUser) => {
+
+  handleReplaceUserInfo = (newUser) => {
     this.setState({
       user: newUser
     })
@@ -21,8 +21,8 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <WelcomeComponent user={this.state.user}/>
-        <Form handleReplaceUser={this.handleReplaceUser}/>
+        <Form handleReplaceUser={this.handleReplaceUserInfo}/>
+        <UserInfo user={this.state.user}/>
       </div>
     )
   }

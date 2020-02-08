@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Form extends Component {
   state = {
       username: "",
-      password: "",
       bio: ""
   }
 
@@ -18,7 +17,6 @@ export default class Form extends Component {
     this.props.handleReplaceUser(this.state)
     this.setState({
         username: "",
-        password: "",
         bio: ""
     })
   }
@@ -26,15 +24,30 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-          <h1>Edit Logged In User</h1>
           <form onSubmit={this.handleOnSubmit}>
-              <label>Username</label>
-              <input type="text" value={this.state.username} onChange={this.handleOnChange} autoComplete="off" name="username" placeholder="Username"/>
-              <label>Password</label>
-              <input type="text" value={this.state.password} onChange={this.handleOnChange} autoComplete="off" name="password" placeholder="Password"/>
-              <label>Bio</label>
-              <input type="text" value={this.state.bio} onChange={this.handleOnChange} autoComplete="off" name="bio" placeholder="Bio"/>
-              <input type="submit" value="Submit"/>
+              <fieldset>
+                <legend>Edit User</legend>
+                <label>Username</label>
+                <input 
+                    type="text" 
+                    value={this.state.username} 
+                    onChange={this.handleOnChange} 
+                    autoComplete="off" name="username" 
+                    placeholder="Username"
+                    required
+                />
+                <label>Bio</label>
+                <input 
+                    type="text" 
+                    value={this.state.bio} 
+                    onChange={this.handleOnChange} 
+                    autoComplete="off" 
+                    name="bio" 
+                    placeholder="Bio"
+                    required
+                />
+                <input type="submit" value="Submit"/>
+              </fieldset>
           </form>
       </div>
     );
