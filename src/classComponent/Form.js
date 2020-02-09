@@ -2,15 +2,8 @@ import React, { Component } from 'react';
 
 export default class Form extends Component {
   state = {
-      username: "",
-      bio: ""
-  }
-
-  componentDidMount(){
-    this.setState({
-        username: this.props.user.username,
-        bio: this.props.user.bio
-    })
+      author: "",
+      quote: ""
   }
 
   handleOnChange = (e) => {
@@ -21,33 +14,33 @@ export default class Form extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault()
-    this.props.handleReplaceUser(this.state)
+    this.props.handleAddQuote(this.state)
   }
 
   render() {
     return (
       <div>
-          <h1>Edit Form</h1>
+          <h1>Add Quote Form</h1>
           <form onSubmit={this.handleOnSubmit}>
               <fieldset>
                 <legend>Edit User</legend>
-                <label>Username</label>
+                <label>Author</label>
                 <input 
                     type="text" 
-                    value={this.state.username} 
+                    value={this.state.author} 
                     onChange={this.handleOnChange} 
-                    autoComplete="off" name="username" 
-                    placeholder="Username"
+                    autoComplete="off" name="author" 
+                    placeholder="author"
                     required
                 />
-                <label>Bio</label>
+                <label>Quote</label>
                 <input 
                     type="text" 
-                    value={this.state.bio} 
+                    value={this.state.quote} 
                     onChange={this.handleOnChange} 
                     autoComplete="off" 
-                    name="bio" 
-                    placeholder="Bio"
+                    name="quote" 
+                    placeholder="quote"
                     required
                 />
                 <input type="submit" value="Submit"/>

@@ -1,40 +1,53 @@
 import React from 'react';
 import '../App.css';
 import Form from './Form'
-import UserInfo from './UserInfo'
+import QuoteContainer from './QuoteContainer'
 
 class App extends React.Component{
+
   state = {
-    editMode: false,
-    user: {
-      username: "Ayeeeeee-ric",
-      bio: "Ayeeeee. I like fortniteeeez. xoxoxo"
-    }
+    quotes: [],
+    addQuote: false
   }
 
-  handleReplaceUserInfo = (newUser) => {
+  componentDidMount(){
+    fetch(`http://localhost:4000/quotes`)
+    .then(res => res.json())
+    .then(quotes => this.setState({
+      quotes
+    }))
+  }
+  // state = {
+  //   editMode: false,
+  //   user: {
+  //     username: "Ayeeeeee-ric",
+  //     bio: "Ayeeeee. I like fortniteeeez. xoxoxo"
+  //   }
+  // }
+
+  handleAddQuote = (newQuote) => {
     this.setState({
-      editMode: false,
-      user: newUser
+      addQuote:false,
+      quotes: [...this.state.quotes, newQuote]
     })
   }
 
-  handleEditMode = () => {
+  handleAddMode = () => {
     this.setState({
-      editMode: !this.state.editMode
+      addQuote: !this.state.addQuote
     })
   }
 
   render(){
     return (
       <div className="App">
+        <button onClick={this.handleAddMode}>Add Quote</button>
         {
-          this.state.editMode ? 
-          <Form user = {this.state.user} handleReplaceUser={this.handleReplaceUserInfo}/>
+          this.state.addQuote ? 
+          <Form handleAddQuote={this.handleAddQuote}/>
           :
-          <UserInfo user={this.state.user}/>
+          <QuoteContainer quotes={this.state.quotes}/>
         }
-        <button onClick={this.handleEditMode}>{this.state.editMode ? "Go Back" : "Edit"}</button>
       </div>
     )
   }
