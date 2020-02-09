@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![Hook-Image](https://images.unsplash.com/photo-1541690090176-17d35a190b6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80)
 
-## What are React Hooks 🤔
+## What are React Hooks? 🤔
 
 - React hooks are functions that let us "hook" into React state and lifecycle features from function components.
 - Hooks allow us to to manipulate the state of functional components without needing to convert into class components
