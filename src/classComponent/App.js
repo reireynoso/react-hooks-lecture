@@ -17,13 +17,6 @@ class App extends React.Component{
       quotes
     }))
   }
-  // state = {
-  //   editMode: false,
-  //   user: {
-  //     username: "Ayeeeeee-ric",
-  //     bio: "Ayeeeee. I like fortniteeeez. xoxoxo"
-  //   }
-  // }
 
   handleAddQuote = (newQuote) => {
     this.setState({
