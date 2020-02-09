@@ -15,15 +15,16 @@ const AppHook = () => {
     //     return [_val, setState]
     // }
 
-    // const [inf, setInf] = useState(info)
-    // console.log(inf)
-    // setInf([3,4])
-    // console.log(inf)
-
     return (
-        <ul>
-
-        </ul>
+        <div className="App">
+            <button onClick={this.handleAddMode}>Add Quote</button>
+            {
+            this.state.addQuote ? 
+            <Form handleAddQuote={this.handleAddQuote}/>
+            :
+            <QuoteContainer quotes={this.state.quotes}/>
+            }
+      </div>
     )
 }
 
