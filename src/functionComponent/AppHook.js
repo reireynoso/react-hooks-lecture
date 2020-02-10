@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-
-const info = [1,2]
+import '../App.css';
+// import Form from './Form'
+// import QuoteContainer from './QuoteContainer'
 
 const AppHook = () => {
     const [something, setSomething] = useState(1)
@@ -17,13 +18,13 @@ const AppHook = () => {
 
     return (
         <div className="App">
-            <button onClick={this.handleAddMode}>Add Quote</button>
-            {
+            {/* <button onClick={this.handleAddMode}>Add Quote</button> */}
+            {/* {
             this.state.addQuote ? 
             <Form handleAddQuote={this.handleAddQuote}/>
             :
             <QuoteContainer quotes={this.state.quotes}/>
-            }
+            } */}
       </div>
     )
 }
