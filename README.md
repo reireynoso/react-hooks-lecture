@@ -53,6 +53,9 @@ There is an effective solution for that. The useEffect hook takes a second argum
     )
 ```
 
+## Pure Functional Component w/ Hooks
+- [Restaurant-App-React](https://github.com/reireynoso/restaurant_app_react)
+
 ## External Resources (Blogs and Documentation)
 - [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
