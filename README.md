@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React hooks are functions that let us "hook" into React state and lifecycle features from function components.
 - Hooks allow us to to manipulate the state of functional components without needing to convert into class components
 - Hooks don't work inside classes(because they let you use React without classes)
-- By using them, lifecycle methods (componentDidMount, componentDidUpdate) can be avoided.
+- By using them, lifecycle methods (componentDidMount, componentDidUpdate) can be replaced.
 
 ## Why React Hooks? 🤨
 - Cleaner and less code with functional components opposed to class components 
